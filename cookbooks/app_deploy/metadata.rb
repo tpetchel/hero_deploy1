@@ -6,3 +6,4 @@ description      'Installs/Configures app_deploy'
 long_description 'Installs/Configures app_deploy'
 version          '0.1.0'
 
+depends 'apache2'
