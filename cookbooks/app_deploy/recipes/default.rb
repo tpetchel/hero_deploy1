@@ -16,3 +16,13 @@ mysql_service 'default' do
   action [:create, :start]
 end
 
+# Create the database instance
+mysql_database 'random_images_db' do
+  connection({
+    :host => '127.0.0.1',
+    :username => 'root',
+    :password => node['mysql']['initial_root_password']
+  })
+  action :create
+end
+
